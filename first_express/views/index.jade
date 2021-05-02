@@ -3,3 +3,6 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  -for(const page in page_list)
+    a(href='./#{page_list[page]}') Move to #{page_list[page]}
+    br
