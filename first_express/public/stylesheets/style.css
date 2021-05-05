@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+.bingo-cell {
+  padding: 12px;
+  border: 1px gray solid;
+}
+
+.bingo-cell:hover {
+  background-color: lightgrey;
+}
+
+.bingo-cell.checked {
+  background-color: gray;
+}

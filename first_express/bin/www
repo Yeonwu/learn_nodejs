@@ -7,6 +7,11 @@
 var app = require('../app');
 var debug = require('debug')('first-express:server');
 var http = require('http');
+var socketio = require('socket.io');
+
+// User made modules
+var chat = require('./chat');
+var bingo = require('./bingo');
 
 /**
  * Get port from environment and store in Express.
@@ -25,9 +30,13 @@ var server = http.createServer(app);
  * Create Socket.
  */
 
-var io = require('socket.io')(server);
-var chat = require('./chat');
-chat.start(io);
+var io = socketio(server);
+
+var chatSocket = io.of("/chat");
+var bingoSocket = io.of("/bingo");
+
+chat.start(chatSocket);
+bingo.start(bingoSocket);
 
 /**
  * Listen on provided port, on all network interfaces.

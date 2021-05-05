@@ -1,6 +1,6 @@
 function get(query) { return document.querySelector(query) };
 
-var socket = io.connect('http://localhost:3000');
+var socket = io('/chat');
 var nickname = '';
 
 socket.on('login', function (data) {

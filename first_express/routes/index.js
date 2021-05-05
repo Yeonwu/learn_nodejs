@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var page_list = ['test', 'socket'];
+var page_list = ['test', 'chat', 'bingo'];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -12,8 +12,12 @@ router.get('/test', function(req, res, next) {
   res.render('test', {title: 'Test'});
 });
 
-router.get('/socket', function(req, res, next) {
-  res.render('socket', {title: 'socket test'});
+router.get('/chat', function(req, res, next) {
+  res.render('chat', {title: 'chatting room'});
 });
+
+router.get('/bingo', function(req, res, next) {
+  res.render('bingo', {title: 'Bingo'});
+})
 
 module.exports = router;
