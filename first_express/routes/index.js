@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var memo = require('./memo').init();
 
-var page_list = ['test', 'chat', 'bingo'];
+var page_list = ['test', 'chat', 'bingo', 'memo'];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -19,5 +20,8 @@ router.get('/chat', function(req, res, next) {
 router.get('/bingo', function(req, res, next) {
   res.render('bingo', {title: 'Bingo'});
 })
+
+router.use('/memo', memo)
+
 
 module.exports = router;

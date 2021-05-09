@@ -1,0 +1,10 @@
+extends layout 
+block content 
+    h1 title 
+    div#memos
+    form#ajax-form
+        input(name='author', type='text')
+        input(name='content', type='text')
+        input#submit(type='button' value='등록')
+
+    script(src="/javascripts/memo.js") 
