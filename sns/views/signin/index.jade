@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h1 Welcome to #{title}
+  ul.nav.nav-tabs
+    li.nav-item
+      a#to-signin.nav-link.active(href="#") Sign In
+    li.nav-item
+      a#to-signup.nav-link(href="#") Sign Up
+
+  form.container-fluid
+    div.row
+    div.col-md-4.offset-md-4
+      div.input-group.active-signin.active-signup
+        input.form-control(type="text", name="name" placeholder="Name")
+      div.input-group.active-signup
+        input.form-control(type="text", name="email" placeholder="Email")
+      div.input-group.active-signin.active-signup
+        input.form-control(type="password", name="pw" placeholder="Password")
+      div.d-flex.flex-row-reverse
+          div#submit-btn.btn.btn-primary Go
+  script(src="/javascripts/lib/cookie.js")
+  script(src="/javascripts/home/index.js")
+  
