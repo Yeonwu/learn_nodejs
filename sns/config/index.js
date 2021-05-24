@@ -9,7 +9,7 @@ var configData = {
         },
     },
     TOKEN: {
-        SECRET_KEY: "qodn39d1md",
+        SECRET_KEY: "",
     },
 }
 
