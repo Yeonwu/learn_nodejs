@@ -5,6 +5,9 @@
  */
 
 process.env.SERVER_CONFIG = 'C:/old_codes/learn_nodejs/sns/config/index.js';
+process.env.NODE_ROOT = 'C:/old_codes/learn_nodejs/sns';
+
+global.__base = process.env.NODE_ROOT;
 
 /**
  * Module dependencies.
